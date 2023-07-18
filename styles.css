@@ -1,0 +1,104 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100vw;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Logos/logoc1.png');
+  background-repeat: repeat;
+  background-size: 15px;
+  filter: blur(10px); /* Aplica un efecto de desenfoque solo al fondo */
+  z-index: -1;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+}
+
+.logo img {
+  width: 100px;
+}
+
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #93a8ac, #b5bbaf);
+  border-color: #fff;
+  justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(to bottom, #1372b8, #4c9efc);
+}
+
+
+/* Carousel styles */
+#carousel .carousel-inner {
+  height: 400px; /* Adjust the height as needed */
+}
+
+#carousel .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Soluciones section styles */
+#soluciones .circles-container {
+  width: 25%;
+  float: left;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#soluciones .circle {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#soluciones .circle img {
+  width: 100px; /* Adjust the size as needed */
+}
+
+#soluciones .circle h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
