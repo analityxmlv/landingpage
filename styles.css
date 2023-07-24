@@ -1,9 +1,26 @@
+@font-face {
+  font-family: 'museomoderno';
+  src: url('tipografia/MuseoModerno/MuseoModerno-Medium.woff2') format('woff'),
+       url('tipografia/MuseoModerno/MuseoModerno-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+  background-color: #6b6f72;
+  margin: 0;
+  padding: 0;
+  font-family: 'museomoderno';
+  font: 'museomoderno';
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   max-width: 100vw;
+  position: relative;
+  font-family: 'museomoderno';
+  font: 'museomoderno';
 }
 
 header::before {
@@ -16,7 +33,7 @@ header::before {
   background-image: url('Logos/logoc1.png');
   background-repeat: repeat;
   background-size: 15px;
-  filter: blur(10px); /* Aplica un efecto de desenfoque solo al fondo */
+  filter: blur(10px); 
   z-index: -1;
 }
 
@@ -51,23 +68,22 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    z-index: 1;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  z-index: 1;
 }
 
 nav ul li a:hover {
-    background: linear-gradient(to bottom, #1372b8, #4c9efc);
+  background: linear-gradient(to bottom, #1372b8, #4c9efc);
 }
-
 
 /* Carousel styles */
 #carousel .carousel-inner {
-  height: 400px; /* Adjust the height as needed */
+  height: 100%; 
 }
 
 #carousel .item img {
@@ -77,28 +93,116 @@ nav ul li a:hover {
 }
 
 /* Soluciones section styles */
+#soluciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-betweem;
+  width: 100%;
+  background-color: #6b6f72;
+  font-family: 'museomoderno';
+  font: 'museomoderno';
+}
+
 #soluciones .circles-container {
-  width: 25%;
-  float: left;
+  width: calc(25% - 20px);
+  margin: 10px;
   text-align: center;
-  padding: 20px;
   box-sizing: border-box;
 }
 
 #soluciones .circle {
   display: inline-block;
   border-radius: 50%;
-  background-color: #f1f1f1;
+  background-color: transparent;
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 #soluciones .circle img {
-  width: 100px; /* Adjust the size as needed */
+  width: 100px; 
 }
 
 #soluciones .circle h3 {
   margin-top: 10px;
   font-size: 16px;
+  color: #fff;
+}
+
+#contacto {
+  display: flex; 
+  width: 100%;
+  justify-content: space-between;
+  background-color: #6b6f72;
+  font-family: 'museomoderno';
+  font: 'museomoderno';
+  color: #fff;
+}
+
+.contacto-container {
+  display: flex;
+  width: 100%;
+}
+
+.formulario {
+  flex: 1; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.informacion-contacto {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.form-group {
+  flex: 1;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #93a8ac;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4c9efc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+  }
+  .form-group {
+    flex: 100%;
+  }
 }
