@@ -79,9 +79,18 @@ nav ul li {
   display: inline-block;
   margin-left: 20px;
   border-radius: 10px;
-  background: linear-gradient(to bottom, #93a8ac, #b5bbaf);
   border-color: #fff;
   justify-content: center;
+  position: relative;
+}
+
+nav ul li a.cotizar-button {
+  background: linear-gradient(to bottom, #f78c6c, #ff5555); /* Your custom gradient background */
+  color: #fff;
+}
+
+nav ul li a.cotizar-button:hover {
+  background: linear-gradient(to bottom, #ff5555, #f78c6c); /* Custom gradient on hover */
 }
 
 nav ul li a {
@@ -90,8 +99,7 @@ nav ul li a {
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
-  transition: background 0.3s ease;
-  z-index: 1; 
+  transition: background 0.3s ease; 
 }
 
 nav ul li a:hover {
