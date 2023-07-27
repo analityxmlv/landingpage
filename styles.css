@@ -5,7 +5,7 @@
 }
 
 #home {
-  background-color: #4c5760;
+  background: linear-gradient(-135deg, #4c5760, #93a8ac);
   color: #66635b;
   padding: 50px;
 }
@@ -138,6 +138,10 @@ nav {
   background: linear-gradient(135deg, #4c5760, #93a8ac);
   font-family: 'museomoderno';
   font: 'museomoderno';
+}
+
+#soluciones :hover {
+  background-color: transparent;
 }
 
 #soluciones .circles-container {
